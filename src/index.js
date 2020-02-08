@@ -74,6 +74,7 @@ exports.handler = async event => {
             // Make sure we're returning the values we just got to the user.
             response.body = pokemonData
 
+            // NOTE: Didn't get to saving during presentation, so this is untested, but should work just fine
             const putParams = {
                 TableName: 'pokemonData',
                 Item: pokemonData
