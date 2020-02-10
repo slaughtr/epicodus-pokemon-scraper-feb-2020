@@ -18,6 +18,7 @@ You will need an AWS account to run this - everything here qualifies for the fre
 9. Name your function `getPokemonData`, ensure the Node runtime is selected, and choose to `Create a new role with basic Lambda permissions`
     * If you'd like to name your function something else, you will need to change the `--function-name=getPokemonData` value in the `deploy` script in `package.json`
 10. Hit `Create function`. On the Lambda's page, scroll down to `Basic settings` and hit `Edit`. Change the timeout to 10 seconds and `Save` 
+   * EDIT: right about here is where you'd want to run `npm run deploy` in the `/src` dir of this repo to get the code the Lambda function.
 11. Back on the Lambda's page, find the `Execution role` section, and click the link to `View the (role name here) role`.
 12. On the role's page, click `Attach policies`. On the next page search for dynamo and select the `AmazonDynamoDBFullAccess` policy, then click `Attach policy`.
     * In an actual production app you would want to craft a more specific role to lock down access, but that is outside the scope of this README.
